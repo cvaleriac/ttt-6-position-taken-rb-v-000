@@ -23,15 +23,10 @@ def move (board, index, value = "X")
 end
 
 def position_taken?(board, index)
-
-  if (board[index] == " " || board[index] == "" || board[index] == nil)
-    return false
-  else #(board[index] == "X" || board[index]== "O")
-
-  if board[index] == " " || "" || nil
-    return false
-  elsif board[index] == "X" || "O"
-
-    return true
-  end
+  if board[index] == " " || board[index] == "" || board[index] == nil
+    false
+  else
+    board[index] == "X" || board[index] == "O"
+    true
+  end 
 end
